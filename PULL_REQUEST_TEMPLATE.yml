@@ -1,0 +1,14 @@
+# Check-List
+- [+]: ["Contributor Guidelines"]:'(https://github.com/OWASP/Nettacker/wiki/Developers#contribution-guidelines)'
+- [+]: code.test.dev/local/env/flake8***pylint.
+- [+]: Python3-compatible.
+- [+]: PEP8-styling--guide---line with 4 spaces indentation.
+- [+]: This pr relates to only one issue or only one feature...
+- [+]: Referrer issue number in commit message...
+- [+]: RELEVANT.docx
+- [+]: ^d^stream \master\branch
+# Changes proposed in this pull request...Your dev/env
+- OS: `x`
+- OS Version: `x`
+- Python Version: `x`
+`
