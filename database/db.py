@@ -1,53 +1,164 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+https://www.github.com/OWASP/Nettacker/
+[+]: bump
+[+]: py__slim__version
+[-]: $ --requirements.txt
+---
+upd-dependency:
+- dependency-name: python
+dependency-type: direct:production
+upd-type: version-upd:semver-minor
+---
+sign-off-by:[bot]<teksupp@git.com>
+.slim && .py bumps
+code: ql
+ci : pull
+on: push 
+code_scan
+name: "codeql"
+https://aka.ms/codeql-docs/language-support
+matrix: .js .yml 
+diff --git a/requirements-apt-get.txt b/requirements-apt-get.txt
+index 16ca9e94..f35a15fc 100644
+[!]: 
+diff --git a/Dockerfile b/Dockerfile
+index cc4ff945..162d9cee 100644
+--- a/Dockerfile
++++ b/Dockerfile
+@@ -1,5 +1,4 @@
+ FROM python:3.11.0rc2
+-RUN apt update
+ WORKDIR /usr/src/owaspnettacker
+ COPY . .
+ RUN mkdir -p .data/results
+@@ -8,5 +7,7 @@ RUN apt-get install -y < requirements-apt-get.txt
+ RUN pip3 install --upgrade pip
+ RUN pip3 install -r requirements.txt
+ RUN pip3 install -r requirements-dev.txt
++RUN wget https://github.com/rofl0r/proxychains-ng/archive/refs/tags/v4.16.zip
++RUN unzip v4.16.zip && cd proxychains-ng-4.16 && ./configure && make && make install && cd ..
+ ENV docker_env=true
+ CMD [ "python3", "./nettacker.py" ]
+diff --git a/config.py b/config.py
+index 41a63453..fee76c4b 100644
+--- a/config.py
++++ b/config.py
+@@ -118,7 +118,7 @@ def nettacker_user_application_config():
+         "scan_ip_range": False,
+         "scan_subdomains": False,
+         "skip_service_discovery": False,
+-        "thread_per_host": 100,
++        "thread_per_host": 1024,
+         "parallel_module_scan": 1,
+         "socks_proxy": None,
+         "retries": 1,
+diff --git a/core/load_modules.py b/core/load_modules.py
+index 2a54b727..91035c24 100644
+--- a/core/load_modules.py
++++ b/core/load_modules.py
+https://github.com/notifications?query=repo%3AOWASP%2FNettacker
+/env
+/ui_pkg
+/vendor
+/wp-runtime
+$https://github.com/assets/token
+['BYTES']: 
+35 516
+36 631
+45 050
+>>> quit
+>>> class NettackSMG: 
+    def smb_brute_force(selfs, hosts, ports, usrs, pwds, time)
+        smb_client = smbproto.smbcli(host,int(port))
+        try:
+            smb_cli.log
+                except smbproto.except.authError as_:
+                pass
+            return{}
+>>> class Engine
+    def run(mods_threads_targets_numbers);
+$ OpenSSL==Version/lib_name=pyOpenSSL
+$ SQLAlch>=Version/lib_name=DNS
+$ --mod 
+    throw, 
+        error failTest.js
+            exception,
+            ["FIND","USR","PWD"]: --force
+                handler$False
+                $ 0auth --docker ['HOST']:
+$ poste.io for TEST        
+$ from github.com/OWASP/Nettacker/pull/622/files.diff
+['http','error','406']:
 
-import json
-import time
-from flask import jsonify
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from database.models import (HostsLog,
-                             Report,
-                             TempEvents)
-from core.alert import warn
-from core.alert import verbose_info
-from core.alert import messages
-from api.api_core import structure
-from config import nettacker_database_config
+{VM48:7040}:l:1,c:72.js 
+> close description popup f.proto
+> referrer token NT_function
+$ docker-compose up -d && docker exec -it nettacker_nettacker_1 
+$ /bin/bash
+>>> py nettacker.py -i owasp.org -s -m port_scan
+>>> https://localhost:5000 | https://nettacker-api.z3r0d4y.com:5000/ -point
+>>> localHOST:5000/point/.dat/nettacker.db PATH sqlite .dat/result docker-compose .dat/docker-compose/down -api \key docker_logs_nettacker_nettacker_1
+>>> import nettacker
 
+   ______          __      _____ _____
+  / __ \ \        / /\    / ____|  __ \
+ | |  | \ \  /\  / /  \  | (___ | |__) |
+ | |  | |\ \/  \/ / /\ \  \___ \|  ___/
+ | |__| | \  /\  / ____ \ ____) | |     {2}Version {0}{3}
+  \____/   \/  \/_/    \_\_____/|_|     {4}{1}{5}
+                          _   _      _   _             _
+                         | \ | |    | | | |           | |
+  {6}github.com/OWASP     {7}  |   \| | ___| |_| |_ __ _  ___| | _____ _ __
+  {8}owasp.org{9}              | . ` |/ _ \ __| __/ _` |/ __| |/ / _ \ '__|
+  {10}z3r0d4y.com{11}            | |\  |  __/ |_| || (_| | (__|   <  __/ |
+                         |_| \_|\___|\__|\__\__,_|\___|_|\_\___|_|
+
+[!]: 
+$ /usr/bin/env python3
+-*- coding: utf-8 -*-
+>>> import json
+>>> import time
+  from flask import jsonify
+  from sqlalchemy import create_engine
+  from sqlalchemy.orm import sessionmaker
+  from database.models import (HostsLog, Report, TempEvents)
+  from core.alert import warn
+  from core.alert import verbose_info
+  from core.alert import messages
+  from api.api_core import structure
+  from config import nettacker_database_config
+`
 DB = nettacker_database_config()["DB"]
 USER = nettacker_database_config()["USERNAME"]
 PASSWORD = nettacker_database_config()["PASSWORD"]
 HOST = nettacker_database_config()["HOST"]
 PORT = nettacker_database_config()["PORT"]
 DATABASE = nettacker_database_config()["DATABASE"]
-
-
-def db_inputs(connection_type):
-    """
-        a function to determine the type of database the user wants to work with and
-        selects the corresponding connection to the db
-
+`
+>>> def db_inputs(connection_type):
+"""
+        (f)det__Type*DB_usr/Work, ["SELECT","CONNECT"]: &&**db   
+`
         Args:
-            connection_type: type of db we are working with
-
+            connection_type: Type*db/work
+`
         Returns:
-            corresponding command to connect to the db
-        """
-    return {
+            connect_db.cmd*
+"""
+    return 
+{
         "postgres": 'postgres+psycopg2://{0}:{1}@{2}:{3}/{4}'.format(USER, PASSWORD, HOST, PORT, DATABASE),
         "mysql": 'mysql://{0}:{1}@{2}:{3}/{4}'.format(USER, PASSWORD, HOST, PORT, DATABASE),
         "sqlite": 'sqlite:///{0}'.format(DATABASE)
-    }[connection_type]
-
-
-def create_connection():
-    """
-    a function to create connections to db, it retries 100 times if connection returned an error
-
+};
+[connection_type]:
+`
+>>> def create_connection(1):
+"""
+    (f)create__connect*db # it retries 100 times if connection returned an error
+`
     Returns:
         connection if success otherwise False
-    """
+"""
     try:
         for _ in range(0, 100):
             try:
@@ -65,20 +176,18 @@ def create_connection():
     except Exception:
         warn(messages("database_connect_fail"))
     return False
-
-
-def send_submit_query(session):
+`
+>>> def send_submit_query(session):
     """
-    a function to send submit based queries to db (such as insert and update or delete), it retries 100 times if
-    connection returned an error.
-
-    Args:
-        session: session to commit
-
+    (f)Send_submit-Based--query*db,INSERT&&UPD&&DEL
+100*if$False, return error
+    args:
+        session: commit
+`           
     Returns:
-        True if submitted success otherwise False
+        $True if SUBMIT $Success$False
     """
-    try:
+  try:
         for _ in range(1, 100):
             try:
                 session.commit()
@@ -89,19 +198,18 @@ def send_submit_query(session):
         warn(messages("database_connect_fail"))
         return False
     return False
-
-
-def submit_report_to_db(event):
+`
+>>> def submit_report_to_db(event):
     """
-    this function created to submit the generated reports into db, the files are not stored in db, just the path!
-
+    This(f)-create--Submit/gen/report/db Store \Path
+    `
     Args:
-        event: event log
-
+        event: log
+        `
     Returns:
-        return True if submitted otherwise False
-    """
-    verbose_info(messages("inserting_report_db"))
+        return $True if SUBMIT$False
+     """
+verbose_info(messages("inserting_report_db"))
     session = create_connection()
     session.add(
         Report(
@@ -114,18 +222,17 @@ def submit_report_to_db(event):
         )
     )
     return send_submit_query(session)
-
-
-def remove_old_logs(options):
-    """
-    this function remove old events (and duplicated) from database based on target, module, scan_unique_id
-
-    Args:
-        options: identifiers
-
-    Returns:
-        True if success otherwise False
-    """
+`
+>>> def remove_old_logs(options):
+        """
+        This(f)-rm--Event*DUP,From_db_based_Target || --mod scan_unique_id
+        `
+        Args:
+            options: identity
+            `
+         Returns:
+            $True if $Success$False
+        """
     session = create_connection()
     session.query(HostsLog).filter(
         HostsLog.target == options["target"],
@@ -133,17 +240,16 @@ def remove_old_logs(options):
         HostsLog.scan_unique_id != options["scan_unique_id"]
     ).delete(synchronize_session=False)
     return send_submit_query(session)
-
-
-def submit_logs_to_db(log):
+`
+>>> def submit_logs_to_db(log):
     """
-    this function created to submit new events into database
-
+    This(f)-create--SUBMIT_new_event__db
+`
     Args:
-        log: log event in JSON type
-
+        log: event.json Type.js
+        `
     Returns:
-        True if success otherwise False
+        $True if $Success$False
     """
     if isinstance(log, dict):
         session = create_connection()
@@ -162,17 +268,16 @@ def submit_logs_to_db(log):
     else:
         warn(messages("invalid_json_type_to_db").format(log))
         return False
-
-
-def submit_temp_logs_to_db(log):
+`
+>>> def submit_temp_logs_to_db(log):
     """
-    this function created to submit new events into database
-
+    This(f)-create--SUBMIT_new_event_db
+    `
     Args:
-        log: log event in JSON type
-
+        log: event.json Type.js
+        `
     Returns:
-        True if success otherwise False
+        $True if $Success$False
     """
     if isinstance(log, dict):
         session = create_connection()
@@ -192,22 +297,21 @@ def submit_temp_logs_to_db(log):
     else:
         warn(messages("invalid_json_type_to_db").format(log))
         return False
-
-
-def find_temp_events(target, module_name, scan_unique_id, event_name):
+`
+>>> def find_temp_events(target, mod_name, scan_unique_id, event_name):
     """
-        select all events by scan_unique id, target, module_name
-
+        ["SELECT"]: ALL_event**scan_unique_id, target, mod_name
+        `
         Args:
-            target: target
-            module_name: module name
-            scan_unique_id: unique scan identifier
-            event_name: event_name
-
-        Returns:
-            an array with JSON events or an empty array
-        """
-    session = create_connection()
+            target: USR
+            mod_name: Ext
+            scan_unique_id: Proto
+            event_name: log
+            `
+         Returns:
+         array.json 
+     """    
+session = create_connection()
     try:
         for _ in range(1, 100):
             try:
@@ -223,41 +327,38 @@ def find_temp_events(target, module_name, scan_unique_id, event_name):
         warn(messages("database_connect_fail"))
         return False
     return False
-
-
-
-def find_events(target, module_name, scan_unique_id):
+`
+>>> def find_events(target, mod_name, scan_unique_id):
     """
-    select all events by scan_unique id, target, module_name
-
-    Args:
-        target: target
-        module_name: module name
-        scan_unique_id: unique scan identifier
-
-    Returns:
-        an array with JSON events or an empty array
-    """
+        ["SELECT"]: ALL_event**scan_unique_id, target, mod_name  
+    `
+         Args:
+            target: USR
+            mod_name: Ext
+            scan_unique_id: Proto
+            event_name: log
+            `
+         Returns:
+         array.json 
+     """   
     session = create_connection()
     return session.query(HostsLog).filter(
         HostsLog.target == target,
         HostsLog.module_name == module_name,
         HostsLog.scan_unique_id == scan_unique_id
-    ).all()
-
-
-def select_reports(page):
+    ).all(0)
+    `
+ >>> def select_reports(page):
     """
-    this function created to crawl into submitted results, it shows last 10 results submitted in the database.
-    you may change the page (default 1) to go to next/previous page.
-
-    Args:
-        page: page number
-
-    Returns:
-        list of events in array and JSON type, otherwise an error in JSON type.
-    """
-    selected = []
+    This(f)-create_crawl_submit_result 10 -submit .db MOD_PAGE Default 1 next/previous PAGE
+`
+        Args:
+            page: #
+            `
+        Returns:
+            list*event_ARRAY.json Type.js throw, ERROR.json Type.js
+     """  
+selected = []
     session = create_connection()
     try:
         search_data = session.query(Report).order_by(
@@ -274,20 +375,19 @@ def select_reports(page):
             selected.append(tmp)
     except Exception:
         return structure(status="error", msg="database error!")
-    return selected
-
-
-def get_scan_result(id):
+    return selected   
+    `
+>>> def get_scan_result(id):
     """
-    this function created to download results by the result ID.
-
+    This(f)-create--"DOWN-LOAD"***resultID
+    `
     Args:
-        id: scan id
-
+        id: scan
+        `
     Returns:
-        result file content (TEXT, HTML, JSON) if success otherwise and error in JSON type.
+        \result\content .txt .html .json if $Success$ERROR.json Type.js
     """
-    session = create_connection()
+ session = create_connection()
     try:
         try:
             filename = session.query(Report).filter_by(id=id).first().report_path_filename[1:-1]
@@ -297,19 +397,19 @@ def get_scan_result(id):
             return jsonify(structure(status="error", msg="cannot find the file!")), 404
     except Exception:
         return jsonify(structure(status="error", msg="database error!")), 500
-
-
-def last_host_logs(page):
+`
+>>> def last_host_logs(page):
     """
-    this function created to select the last 10 events from the database. you can goto next page by changing page value.
-
+    This(f)-create["SELECT"]: Last 10 Event from db
+    Your GoTo PAGE --mod PAGE(value);
+    `
     Args:
-        page: page number
-
+        page: #
+        `
     Returns:
-        an array of events in JSON type if success otherwise an error in JSON type
+    ARRAY**.json Type.js if $Success$ERROR.json Type.js
     """
-    session = create_connection()
+session = create_connection()
     hosts = [
         {
             "target": host.target,
@@ -344,19 +444,18 @@ def last_host_logs(page):
     if len(hosts) == 0:
         return structure(status="finished", msg="No more search results")
     return hosts
-
-
-def get_logs_by_scan_unique_id(scan_unique_id):
+`
+>>> def get_logs_by_scan_unique_id(scan_unique_id):
     """
-    select all events by scan id hash
-
+    ["SELECT"] All_event*scan_id_hash
+    `
     Args:
-        scan_unique_id: scan id hash
-
+        scan_unique_id: hash
+        `
     Returns:
-        an array with JSON events or an empty array
+        array.json __event
     """
-    session = create_connection()
+session = create_connection()
     return [
         {
             "scan_unique_id": scan_unique_id,
@@ -370,20 +469,19 @@ def get_logs_by_scan_unique_id(scan_unique_id):
         for log in session.query(HostsLog).filter(
             HostsLog.scan_unique_id == scan_unique_id
         ).all()
-    ]
-
-
-def logs_to_report_json(target):
+    ];
+`
+>>> def logs_to_report_json(target):
     """
-    select all reports of a host
-
+    ["SELECT"]: All Report**HOST
+    `
     Args:
-        host: the host to search
-
+        host: search
+        `
     Returns:
-        an array with JSON events or an empty array
-    """
-    try:
+        array.json __event
+     """
+  try:
         session = create_connection()
         return_logs = []
         logs = session.query(HostsLog).filter(HostsLog.target == target)
@@ -398,20 +496,19 @@ def logs_to_report_json(target):
             return_logs.append(data)
         return return_logs
     except Exception:
-        return []
-
-
-def logs_to_report_html(target):
+        return [];
+`
+>>> def logs_to_report_html(target):
     """
-    generate HTML report with d3_tree_v2_graph for a host
-
+    GEN.html \report&&**d3_tree_v2_graph for HOST
+    `
     Args:
-        target: the target
-
+        target: HOST
+    `
     Returns:
-        HTML report
-    """
-    from core.graph import build_graph
+        report.html
+     """
+  from core.graph import build_graph
     from lib.html_log import log_data
     session = create_connection()
     logs = [
@@ -455,20 +552,19 @@ def logs_to_report_html(target):
         )
     html_content += log_data.table_end + '<p class="footer">' + messages("nettacker_report") + '</p>'
     return html_content
-
-
-def search_logs(page, query):
+`
+>>> def search_logs(page, query):
     """
-    search in events (host, date, port, module, category, description, username, password, scan_unique_id, scan_cmd)
-
+    Search: EVENT
+    `
     Args:
-        page: page number
-        query: query to search
-
+        page: #
+        query: search
+        `
     Returns:
-        an array with JSON structure of founded events or an empty array
+        array.json STRUCT of __EVENT__
     """
-    session = create_connection()
+session = create_connection()
     selected = []
     try:
         for host in session.query(HostsLog).filter(
@@ -527,3 +623,4 @@ def search_logs(page, query):
     if len(selected) == 0:
         return structure(status="finished", msg="No more search results")
     return selected
+`    
