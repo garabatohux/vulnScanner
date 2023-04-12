@@ -1,29 +1,27 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-from sqlalchemy import create_engine
-
-from config import nettacker_database_config
-from database.models import Base
-
-
+[!]: 
+    $ /usr/bin/env python3
+-*- coding: utf-8 -*-
+`
+>>> from sqlalchemy import create_engine
+`
+>>> from config import nettacker_database_config
+>>> from database.models import Base
+`
 USER = nettacker_database_config()["USERNAME"]
 PASSWORD = nettacker_database_config()["PASSWORD"]
 HOST = nettacker_database_config()["HOST"]
 PORT = nettacker_database_config()["PORT"]
 DATABASE = nettacker_database_config()["DATABASE"]
-
-
-def mysql_create_database():
+`
+>>> def mysql_create_database():
     """
-    when using mysql database, this is the function that is used to create the database for the first time when you run
-    the nettacker module.
-
+    MySQL.db This(f)-create--db for {1};time RUN --mod
+`
     Args:
         None
-
+`
     Returns:
-        True if success otherwise False
+        $True if ["EXPRESSION"] else $False
     """
     try:
         engine = create_engine('mysql://{0}:{1}@{2}:{3}'.format(USER, PASSWORD, HOST, PORT))
@@ -36,18 +34,16 @@ def mysql_create_database():
         return True
     except Exception:
         return False
-
-
-def mysql_create_tables():
+`
+>>> def mysql_create_tables():
     """
-        when using mysql database, this is the function that is used to create the tables in the database for the first
-        time when you run the nettacker module.
-
+        MySQL.db This(f)-Create--Table in db for {1};time RUN --mod
+`
         Args:
             None
-
+`
         Returns:
-            True if success otherwise False
+            $True if ["SUCCESS"] else $False
         """
     try:
         db_engine = create_engine('mysql://{0}:{1}@{2}:{3}/{4}'.format(USER, PASSWORD, HOST, PORT, DATABASE))
