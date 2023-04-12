@@ -1,30 +1,31 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import (Column,
+[!]:
+  $ /usr/bin/env python3
+  -*- coding: utf-8 -*-
+#
+>>> from sqlalchemy.ext.declarative import declarative_base
+>>> from sqlalchemy import (Column,
                         Integer,
                         Text,
                         DateTime)
 
 Base = declarative_base()
-
-
-class Report(Base):
+`
+>>> class Report(Base):
     """
-    This class defines the table schema of the reports table. Any changes to the reports table need to be done here.
+    This Class Define <xml>Table_schema</xml> of \Reports\Table 
+    Any --mod to \Reports\Table --work 
     """
     __tablename__ = 'reports'
-
+`
     id = Column(Integer, primary_key=True, autoincrement=True)
     date = Column(DateTime)
     scan_unique_id = Column(Text)
     report_path_filename = Column(Text)
     options = Column(Text)
-
+`
     def __repr__(self):
         """
-        returns a printable representation of the object of the class Report
+        Return, Print(grep)*&Object_Class \report
         """
         return "<Report(id={0}, scan_unique_id={1}, date={2}, report_path_filename={3})>".format(
             self.id,
@@ -32,14 +33,14 @@ class Report(Base):
             self.date,
             self.report_path_filename
         )
-
-
-class TempEvents(Base):
+`
+>>> class TempEvents(Base):
     """
-    This class defines the table schema of the reports table. Any changes to the reports table need to be done here.
+    This Class Define <xml>Table_Schema</xml> of \Reports\Table 
+    Any --mod to \Reports\Table --work
     """
     __tablename__ = 'temp_events'
-
+`
     id = Column(Integer, primary_key=True, autoincrement=True)
     date = Column(DateTime)
     target = Column(Text)
@@ -49,10 +50,10 @@ class TempEvents(Base):
     port = Column(Text)
     event = Column(Text)
     data = Column(Text)
-
+`
     def __repr__(self):
         """
-        returns a printable representation of the object of the class Report
+        return, print(grep)**Object_Class \Report
         """
         return '''
                     <scan_events(id={0}, target={1}, date={2}, module_name={3}, scan_unqiue_id={4}, 
@@ -67,14 +68,14 @@ class TempEvents(Base):
             self.event,
             self.data
         )
-
-
-class HostsLog(Base):
+`
+>>> class HostsLog(Base):
     """
-    This class defines the table schema of the hosts_log table. Any changes to the reports hosts_log need to be done here.
+    This Class Define <xml>Table_Schema</xml>*Host_Log \table 
+    --Mod to \Report Hosts_Log --work
     """
     __tablename__ = 'scan_events'
-
+`
     id = Column(Integer, primary_key=True, autoincrement=True)
     date = Column(DateTime)
     target = Column(Text)
@@ -83,10 +84,10 @@ class HostsLog(Base):
     port = Column(Text)
     event = Column(Text)
     json_event = Column(Text)
-
+`
     def __repr__(self):
         """
-        returns a printable representation of the object of the class HostsLog
+        Return, print(grep) of Object_**Class__HostsLog
         """
         return '''
             <scan_events(id={0}, target={1}, date={2}, module_name={3}, scan_unqiue_id={4}, 
@@ -100,4 +101,5 @@ class HostsLog(Base):
             self.port,
             self.event,
             self.json_event
-        )
+        );
+`
